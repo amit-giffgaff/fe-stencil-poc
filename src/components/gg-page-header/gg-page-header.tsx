@@ -3,7 +3,6 @@ import { Component, Prop } from '@stencil/core';
 @Component({
   tag: 'gg-page-header',
   styleUrl: 'gg-page-header.scss',
-  shadow: false
 })
 export class ggPageHeader {
 

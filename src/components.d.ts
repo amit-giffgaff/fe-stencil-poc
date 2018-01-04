@@ -6,61 +6,31 @@
 
 
 import {
-  ggCopyBox as GgCopybox
-} from './components/gg-copybox/gg-copybox';
+  ggTextBox as GgTextbox
+} from './components/gg-textbox/gg-textbox';
 
 declare global {
-  interface HTMLGgCopyboxElement extends GgCopybox, HTMLElement {
+  interface HTMLGgTextboxElement extends GgTextbox, HTMLElement {
   }
-  var HTMLGgCopyboxElement: {
-    prototype: HTMLGgCopyboxElement;
-    new (): HTMLGgCopyboxElement;
+  var HTMLGgTextboxElement: {
+    prototype: HTMLGgTextboxElement;
+    new (): HTMLGgTextboxElement;
   };
   interface HTMLElementTagNameMap {
-    "gg-copybox": HTMLGgCopyboxElement;
+    "gg-textbox": HTMLGgTextboxElement;
   }
   interface ElementTagNameMap {
-    "gg-copybox": HTMLGgCopyboxElement;
+    "gg-textbox": HTMLGgTextboxElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "gg-copybox": JSXElements.GgCopyboxAttributes;
+      "gg-textbox": JSXElements.GgTextboxAttributes;
     }
   }
   namespace JSXElements {
-    export interface GgCopyboxAttributes extends HTMLAttributes {
-      
-    }
-  }
-}
-
-
-import {
-  MyComponent as MyComponent
-} from './components/my-component/my-component';
-
-declare global {
-  interface HTMLMyComponentElement extends MyComponent, HTMLElement {
-  }
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
-  };
-  interface HTMLElementTagNameMap {
-    "my-component": HTMLMyComponentElement;
-  }
-  interface ElementTagNameMap {
-    "my-component": HTMLMyComponentElement;
-  }
-  namespace JSX {
-    interface IntrinsicElements {
-      "my-component": JSXElements.MyComponentAttributes;
-    }
-  }
-  namespace JSXElements {
-    export interface MyComponentAttributes extends HTMLAttributes {
-      first?: string;
-      last?: string;
+    export interface GgTextboxAttributes extends HTMLAttributes {
+      name?: string;
+      value?: string;
     }
   }
 }
