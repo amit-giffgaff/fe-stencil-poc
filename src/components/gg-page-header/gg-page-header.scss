@@ -1,0 +1,37 @@
+@import "../../../node_modules/fe-styleguide/assets/scss/core/_all-core";
+
+.page-header-hero {
+  height: 192px;
+  display: block;
+  width: 100%;
+  background-color: getColour(dark-blue);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  border-bottom: getSpacer(tiny) solid getColour(white);
+
+  &__title {
+    position: absolute;
+    bottom: -39px;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+
+  &--large {
+    height: 224px;
+  }
+
+  @media screen and (min-width: getBreakpoint(medium)) {
+    height: 280px;
+
+    &__title {
+      bottom: -42px;
+    }
+
+    &--large {
+      height: 380px;
+    }
+  }
+}
+
