@@ -6,6 +6,36 @@
 
 
 import {
+  ggCopyBox as GgCopybox
+} from './components/gg-copybox/gg-copybox';
+
+declare global {
+  interface HTMLGgCopyboxElement extends GgCopybox, HTMLElement {
+  }
+  var HTMLGgCopyboxElement: {
+    prototype: HTMLGgCopyboxElement;
+    new (): HTMLGgCopyboxElement;
+  };
+  interface HTMLElementTagNameMap {
+    "gg-copybox": HTMLGgCopyboxElement;
+  }
+  interface ElementTagNameMap {
+    "gg-copybox": HTMLGgCopyboxElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "gg-copybox": JSXElements.GgCopyboxAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface GgCopyboxAttributes extends HTMLAttributes {
+      
+    }
+  }
+}
+
+
+import {
   MyComponent as MyComponent
 } from './components/my-component/my-component';
 

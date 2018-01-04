@@ -1,8 +1,8 @@
 exports.config = {
-  namespace: 'mycomponent',
+  namespace: 'components',
   generateDistribution: true,
   bundles: [
-    { components: ['my-component'] }
+    { components: ['gg-copybox'] }
   ]
 };
 
