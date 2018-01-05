@@ -3,17 +3,31 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
-  <title>Stencil Component Starter</title>
+  <title>Web components POC</title>
   <link rel="stylesheet" href="/assets/style.css">
   <script src="/build/components.js"></script>
+
+  <style>
+    .page-section__wrapper--cream-pattern {
+      background-image: url(../../assets/jpg/cream-pattern.jpg);
+    }
+  </style>
 </head>
 <body>
-  <gg-page-header header="Web components rock!"></gg-page-header>
+  <gg-page-header
+    header="Web components rock!"
+    image="https://www.giffgaff.com/styleguide/images/content/home/hp_top_desktop.jpg"
+  ></gg-page-header>
+
   <div class="page-section__wrapper page-section__wrapper--cream-pattern">
     <section class="page-section">
       <h2 class="txt--headline">giffgaff</h2>
-      <gg-textbox></gg-textbox>
+      <form>
+        <gg-textbox></gg-textbox>
+        <gg-button primary large>Submit</gg-button>
     </section>
   </div>
+
+  <!--  -->
 </body>
 </html>

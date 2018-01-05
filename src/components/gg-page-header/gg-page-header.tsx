@@ -7,16 +7,27 @@ import { Component, Prop } from '@stencil/core';
 export class ggPageHeader {
 
   @Prop() header: string;
+  @Prop() image: string;
 
   render() {
+    let css = `
+      .page-header-hero {
+        background-image: url(${this.image});
+      }
+    `
+
+    console.log(css);
     return (
       <header class="page-header-hero page-header-hero--large">
+        <style>{css}</style>
         <div class="page-header-hero__title">
-           <gg-copybox>
-              <h1 class="txt--display">{ this.header }</h1>
+          <gg-copybox>
+            <h1 class="txt--display">{ this.header }</h1>
           </gg-copybox>
         </div>
+      
       </header>
+
     );
   }
 }
