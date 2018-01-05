@@ -37,6 +37,7 @@ export class ggTextBox {
         <input type="text"
                class="form__input"
                id={this.name}
+               name={this.name}
                value={this.value}
                placeholder={ this.placeholder }
                onInput={this.inputChanged.bind(this)}>
