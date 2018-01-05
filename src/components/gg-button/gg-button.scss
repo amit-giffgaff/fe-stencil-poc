@@ -1,104 +1,233 @@
 @import "../../../node_modules/fe-styleguide/assets/scss/core/_all-core";
-// @import "../../../node_modules/fe-styleguide/assets/scss/modules/fe-angularjs-components/_fe-angularjs-components.copy-box";
 
-.copy-box {
-  $block: &;
-  $copy-box-polygon: polygon(.98% 2.18%, 0% 92.45%, 34.71% 91.63%, 56.21% 100%, 89.92% 90.31%, 100% 81.05%, 99.68% 7.73%, 92.83% 0%, 41.29% 9.12%, .98% 2.18%);
-
-  @mixin copy-box-colours($background, $color) {
-    &--#{$background} {
-      #{$block}__body {
-        background-color: getColour($background);
-        color: getColour($color);
-      }
-
-      #{$block}__outline:before {
-        display: none;
-      }
-    }
+.btn {
+  @mixin box-shadow($color) {
+    box-shadow: 0 4px 0 getColour($color);
   }
 
+  @include typography-scale(body-strong);
+
+  vertical-align: baseline;
   display: inline-block;
-  position: relative;
-  max-width: calc(100% - 16px); // allows space for the shaddows
+  cursor: pointer;
   text-align: center;
-  margin-bottom: getSpacer(small); // allows space for outline and shadow
+  text-decoration: none;
+  white-space: nowrap;
+  line-height: 32px;
+  border-radius: 24px;
+  border: 2px solid $theme-button-border;
+  outline: none;
+  transition: all 150ms ease-in-out;
+  transform: none;
+  padding: 0 24px;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+  margin-bottom: getSpacer(fine);
 
-  &--minimal {
-    margin-bottom: getSpacer(tiny);
-  }
+  color: $theme-button;
+  background-color: $theme-button-bg;
+    
+  @include box-shadow(black);
 
-  &__body {
-    background-color: getColour(black);
-    color: getColour(white);
-    display: block;
-    padding: getSpacer(small) getSpacer(tiny);
-    clip-path: $copy-box-polygon;
-  }
-
-  &__outline {
-    position: relative;
-    display: block;
-    z-index: 1;
-
-    &:before { // used to show the white border
-      content: "";
-      background-color: getColour(off-white);
-      width: calc(100% + #{getSpacer(fine)});
-      height: calc(100% + #{getSpacer(fine)});
-      position: absolute;
-      left: -2px;
-      top: -2px;
-      z-index: -1;
-      clip-path: $copy-box-polygon;
-    }
-
-    &:after { // used to show the drop-shadow
-      content: "";
-      background-color: getColour(black);
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      left: getSpacer(tiny);
-      top: getSpacer(tiny);
-      z-index: -2;
-      clip-path: $copy-box-polygon;
-    }
-  }
-
-  &__boing {
-    width: 64px;
-    height: getSpacer(small);
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: getSpacer(fine);
-
-    &--off-white {
-      fill: getColour(off-white);
-    }
-  }
-
-  &__dots {
+  &:before,
+  &:after {
+    content: "";
     position: absolute;
-    right: -1 * getSpacer(small);
-    bottom: -1 * getSpacer(small);
-    width: calc(100% - #{getSpacer(small)});
-    height: calc(100% - #{getSpacer(small)});
-    z-index: 0;
-    background-image: url(../../assets/png/copy-box-dots.png);
-    clip-path: $copy-box-polygon;
+    width: getIconSize(small);
+    height: getIconSize(small);
+    opacity: 0;
+    display: block;
+    background-size: 100%;
   }
 
-  @include copy-box-colours(off-white, black);
-  @include copy-box-colours(yellow, black);
-  @include copy-box-colours(light-green, white);
-  @include copy-box-colours(light-pink, white);
-  @include copy-box-colours(light-blue, white);
+  &:before {
+    background-image: url('assets/CTA_doodles_left-01.svg');
+    left: -12px;
+    top: -4px;
+  }
 
-  @media screen and (min-width: getBreakpoint(medium)) {
-    &__body {
-      padding: getSpacer(small);
+  &:after {
+    background-image: url('assets/CTA_doodles_right-01.svg');
+    right: -12px;
+    bottom: -8px;
+  }
+
+  &:focus,
+  &:hover {
+    border: 2px solid getColour(black);
+    transition: all 150ms ease-in-out;
+
+    &:before {
+      animation: doodle-btn-doodle-animation-left 300ms ease-in-out;
+      animation-fill-mode: both;
+    }
+
+    &:after {
+      animation: doodle-btn-doodle-animation-right 300ms ease-in-out;
+      animation-fill-mode: both;
+    }
+  }
+
+  &:active {
+    border: 2px solid black;
+    box-shadow: 0 1px 0 0;
+    transform: translateY(4px);
+
+    &:before,
+    &:after {
+      animation: doodle-btn-doodle-fade 150ms ease-in-out;
+    }
+  }
+
+  &--primary {
+    color: $theme-button-primary;
+    background-color: $theme-button-primary-bg;
+    border-color: $theme-button-primary-border;
+
+    &:hover,
+    &:focus {
+      color: $theme-button-primary-hover;
+      background-color: $theme-button-primary-hover-bg;
+      border-color: $theme-button-primary-hover-border;
+    }
+  }
+
+  &--white {
+    color: $theme-button-white;
+    background-color: $theme-button-white-bg;
+    border-color: $theme-button-white-border;
+    @include box-shadow(white);
+
+    &:hover,
+    &:focus {
+      color: $theme-button-white-hover;
+      background-color: $theme-button-white-hover-bg;
+      border-color: $theme-button-white-hover-border;
+    }
+
+    &:before {
+      background-image: url('CTA_doodles_left-01--white.svg');
+    }
+
+    &:after {
+      background-image: svg('CTA_doodles_right-01--white.svg');
+    }
+  }
+
+  @if mixin-exists(buttons-additional-styles) {
+    @include buttons-additional-styles();
+  }
+
+  &--large {
+    // stylelint-disable property-blacklist
+    // picking a custom font size that makes the buttons look good
+    font-size: 23px;
+    // stylelint-enable
+    line-height: getSpacer(large);
+    border-radius: 30px;
+
+    &:after {
+      bottom: -4px;
+    }
+  }
+
+  &--full-width {
+    width: 100%;
+  }
+
+  &--loading,
+  &--loading--white {
+    position: relative;
+    color: transparent;
+    user-select: none;
+    pointer-events: none;
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: transparent;
+    }
+
+    &:after {
+      content: '';
+      opacity: 1;
+      background-image: none;
+
+      @include loading-icon(true);
+    }
+  }
+
+  &--loading--white:after {
+    @include loading-icon(true, white);
+  }
+
+  &--shake {
+    @include animation-shake;
+  }
+
+  &.btn--disabled,
+  &:disabled,
+  &[disabled] {
+    cursor: default;
+    pointer-events: none;
+    color: $theme-button-disabled;
+    background-color: $theme-button-disabled-bg;
+    border-color: $theme-button-disabled-border;
+    opacity: .65;
+    box-shadow: none;
+
+    &:after {
+      display: none;
     }
   }
 }
+
+@media screen and (min-width: $breakpoint-medium) {
+  .btn {
+    padding: 0 getSpacer(medium);
+  }
+}
+
+@keyframes doodle-btn-doodle-animation-left {
+  0% {
+    opacity: 0;
+    transform: translate(4px, 4px) scale(.95);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate(-2px, -2px) scale(1.02);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0) scale(1);
+  }
+}
+
+@keyframes doodle-btn-doodle-animation-right {
+  0% {
+    opacity: 0;
+    transform: translate(-4px, -4px) scale(.95);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate(2px, 2px) scale(1.02);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0) scale(1);
+  }
+}
+
+@keyframes doodle-btn-doodle-fade {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}  
