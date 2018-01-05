@@ -19,6 +19,22 @@
     .btn:after {
       background-image: url('assets/svg/CTA_doodles_right-01.svg');
     }
+
+    .poc-form {
+      width: 100%;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+
+    .form__btn-group {
+      margin-top: 32px;
+      text-align: center;
+    }
+
+    gg-button + gg-button {
+      margin-left: 16px;
+    }
   </style>
 </head>
 <body>
@@ -29,13 +45,16 @@
 
   <div class="page-section__wrapper page-section__wrapper--cream-pattern">
     <section class="page-section">
-      <h2 class="txt--headline">giffgaff</h2>
+      <!-- <h2 class="txt--headline">giffgaff</h2> -->
 
-      <form class="form" method="get">
+      <form class="form poc-form" method="get">
         <gg-textbox label="First Name" name="firstName" placeholder="First name" ></gg-textbox>
         <gg-textbox label="Last Name" name="lastName" placeholder="Last name" ></gg-textbox>
-        <gg-button name="getSubmit" type="submit" primary large>get Submit</gg-button>
-        <gg-button name="ajaxSubmit" primary large>ajax Submit</gg-button>
+
+        <div class="form__btn-group">
+          <gg-button name="getSubmit" type="submit" primary large>get</gg-button>
+          <gg-button name="ajaxSubmit" large>ajax</gg-button>
+        </div>
     </section>
   </div>
   <script>
