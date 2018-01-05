@@ -16,7 +16,6 @@ export class ggPageHeader {
       }
     `
 
-    console.log(css);
     return (
       <header class="page-header-hero page-header-hero--large">
         <style>{css}</style>
