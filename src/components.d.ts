@@ -6,31 +6,33 @@
 
 
 import {
-  ggButton as GgButton
-} from './components/gg-button/gg-button';
+  ggTextBox as GgTextbox
+} from './components/gg-textbox/gg-textbox';
 
 declare global {
-  interface HTMLGgButtonElement extends GgButton, HTMLElement {
+  interface HTMLGgTextboxElement extends GgTextbox, HTMLElement {
   }
-  var HTMLGgButtonElement: {
-    prototype: HTMLGgButtonElement;
-    new (): HTMLGgButtonElement;
+  var HTMLGgTextboxElement: {
+    prototype: HTMLGgTextboxElement;
+    new (): HTMLGgTextboxElement;
   };
   interface HTMLElementTagNameMap {
-    "gg-button": HTMLGgButtonElement;
+    "gg-textbox": HTMLGgTextboxElement;
   }
   interface ElementTagNameMap {
-    "gg-button": HTMLGgButtonElement;
+    "gg-textbox": HTMLGgTextboxElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "gg-button": JSXElements.GgButtonAttributes;
+      "gg-textbox": JSXElements.GgTextboxAttributes;
     }
   }
   namespace JSXElements {
-    export interface GgButtonAttributes extends HTMLAttributes {
-      large?: boolean;
-      primary?: boolean;
+    export interface GgTextboxAttributes extends HTMLAttributes {
+      label?: string;
+      name?: string;
+      placeholder?: string;
+      value?: string;
     }
   }
 }

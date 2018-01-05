@@ -7,6 +7,8 @@ import { Component, Element, Event, EventEmitter, Prop, PropDidChange } from '@s
 export class ggTextBox {
 
   @Prop() name: string;
+  @Prop() label: string;
+  @Prop() placeholder: string;
   @Element() el: HTMLElement;
   @Prop({ mutable: true }) value: string;
   @Event() valueChange: EventEmitter;
@@ -30,11 +32,16 @@ export class ggTextBox {
 
   render() {
     return (
-      <input type="text"
-             class="form__input"
-             value={this.value}
-             onInput={this.inputChanged.bind(this)}>
-      </input>
+      <div class="form__element">
+        <label class="form__label" htmlFor={this.name}>{ this.label }</label>
+        <input type="text"
+               class="form__input"
+               id={this.name}
+               value={this.value}
+               placeholder={ this.placeholder }
+               onInput={this.inputChanged.bind(this)}>
+        </input>
+      </div>
     );
   }
 }

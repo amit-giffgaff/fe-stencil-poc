@@ -10,7 +10,7 @@ export class ggButton {
   @Prop() large: boolean;
 
   render() {
-    const classNames = `btn ${this.primary ? 'btn-primary' : '' } ${this.large ? 'btn-large' : '' }`;
+    const classNames = `btn ${this.primary ? 'btn--primary' : '' } ${this.large ? 'btn--large' : '' }`;
     return (
       <button class={ classNames }>
         <slot></slot>
