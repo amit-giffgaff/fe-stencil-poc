@@ -1,7 +1,7 @@
 import { Component, Prop, State, Element } from '@stencil/core';
 
 @Component({
-  tag: 'gg-button',
+  tag: 'ggc-button',
   styleUrl: 'gg-button.scss'
 })
 export class ggButton {

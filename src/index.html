@@ -51,8 +51,8 @@
         <gg-textbox label="Last Name" name="lastName" placeholder="Last name" ></gg-textbox>
 
         <div class="form__btn-group">
-          <gg-button name="getSubmit" type="submit" primary large>get</gg-button>
-          <gg-button name="ajaxSubmit" large>ajax</gg-button>
+          <ggc-button name="getSubmit" type="submit" primary large>get</ggc-button>
+          <ggc-button name="ajaxSubmit" large>ajax</ggc-button>
         </div>
       </form>
     </section>
@@ -61,7 +61,7 @@
   <script>
     (function() {
 
-      document.querySelector('gg-button[name="ajaxSubmit"]').addEventListener('click', function (e) {
+      document.querySelector('ggc-button[name="ajaxSubmit"]').addEventListener('click', function (e) {
         e.preventDefault();
         var name = {
           firstName : document.querySelector('gg-textbox[name="firstName"]').value,
