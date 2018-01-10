@@ -1,6 +1,6 @@
 @import "../../../node_modules/fe-styleguide/assets/scss/core/_all-core";
 
-.btn {
+.c-btn {
   @mixin box-shadow($color) {
     box-shadow: 0 4px 0 getColour($color);
   }
