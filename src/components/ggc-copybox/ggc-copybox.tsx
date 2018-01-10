@@ -1,11 +1,11 @@
 import { Component } from '@stencil/core';
 
 @Component({
-  tag: 'gg-copybox',
-  styleUrl: 'gg-copybox.scss',
+  tag: 'ggc-copybox',
+  styleUrl: 'ggc-copybox.scss',
   shadow: true
 })
-export class ggCopyBox {
+export class ggcCopyBox {
 
   render() {
     return (

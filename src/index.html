@@ -32,27 +32,27 @@
       text-align: center;
     }
 
-    gg-button + gg-button {
+    ggc-button + ggc-button {
       margin-left: 16px;
     }
   </style>
 </head>
 <body>
 
-  <gg-page-header
+  <ggc-page-header
     header="Web components rock!"
     image="https://www.giffgaff.com/styleguide/images/content/home/hp_top_desktop.jpg"
-  ></gg-page-header>
+  ></ggc-page-header>
 
   <div class="page-section__wrapper page-section__wrapper--cream-pattern">
     <section class="page-section">
       <form class="form poc-form" method="get">
-        <gg-textbox label="First Name" name="firstName" placeholder="First name" ></gg-textbox>
-        <gg-textbox label="Last Name" name="lastName" placeholder="Last name" ></gg-textbox>
+        <ggc-textbox label="First Name" name="firstName" placeholder="First name" ></ggc-textbox>
+        <ggc-textbox label="Last Name" name="lastName" placeholder="Last name" ></ggc-textbox>
 
         <div class="form__btn-group">
-          <ggc-button name="getSubmit" type="submit" primary large>get</ggc-button>
-          <ggc-button name="ajaxSubmit" large>ajax</ggc-button>
+          <ggcc-button name="getSubmit" type="submit" primary large>get</ggcc-button>
+          <ggcc-button name="ajaxSubmit" large>ajax</ggcc-button>
         </div>
       </form>
     </section>
@@ -61,11 +61,11 @@
   <script>
     (function() {
 
-      document.querySelector('ggc-button[name="ajaxSubmit"]').addEventListener('click', function (e) {
+      document.querySelector('ggcc-button[name="ajaxSubmit"]').addEventListener('click', function (e) {
         e.preventDefault();
         var name = {
-          firstName : document.querySelector('gg-textbox[name="firstName"]').value,
-          lastName : document.querySelector('gg-textbox[name="lastName"]').value
+          firstName : document.querySelector('ggc-textbox[name="firstName"]').value,
+          lastName : document.querySelector('ggc-textbox[name="lastName"]').value
         };
 
         console.log(name);

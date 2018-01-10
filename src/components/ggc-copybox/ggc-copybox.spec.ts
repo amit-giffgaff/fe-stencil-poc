@@ -1,4 +1,4 @@
-import { ggPageHeader } from './gg-page-header';
+import { ggCopyBox } from './ggc-copybox';
 
 describe('my-component', () => {
   it('should build', () => {

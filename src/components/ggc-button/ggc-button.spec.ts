@@ -1,4 +1,4 @@
-import { ggCopyBox } from './gg-copybox';
+import { ggCopyBox } from './ggc-copybox';
 
 describe('my-component', () => {
   it('should build', () => {

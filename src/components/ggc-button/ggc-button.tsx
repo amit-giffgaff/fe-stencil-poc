@@ -2,9 +2,9 @@ import { Component, Prop, State, Element } from '@stencil/core';
 
 @Component({
   tag: 'ggc-button',
-  styleUrl: 'gg-button.scss'
+  styleUrl: 'ggc-button.scss'
 })
-export class ggButton {
+export class ggcButton {
 
   @Element() el: HTMLElement;
 

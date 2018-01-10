@@ -6,8 +6,8 @@
 
 
 import {
-  ggButton as GgcButton
-} from './components/gg-button/gg-button';
+  ggcButton as GgcButton
+} from './components/ggc-button/ggc-button';
 
 declare global {
   interface HTMLGgcButtonElement extends GgcButton, HTMLElement {
@@ -38,29 +38,29 @@ declare global {
 
 
 import {
-  ggCopyBox as GgCopybox
-} from './components/gg-copybox/gg-copybox';
+  ggcCopyBox as GgcCopybox
+} from './components/ggc-copybox/ggc-copybox';
 
 declare global {
-  interface HTMLGgCopyboxElement extends GgCopybox, HTMLElement {
+  interface HTMLGgcCopyboxElement extends GgcCopybox, HTMLElement {
   }
-  var HTMLGgCopyboxElement: {
-    prototype: HTMLGgCopyboxElement;
-    new (): HTMLGgCopyboxElement;
+  var HTMLGgcCopyboxElement: {
+    prototype: HTMLGgcCopyboxElement;
+    new (): HTMLGgcCopyboxElement;
   };
   interface HTMLElementTagNameMap {
-    "gg-copybox": HTMLGgCopyboxElement;
+    "ggc-copybox": HTMLGgcCopyboxElement;
   }
   interface ElementTagNameMap {
-    "gg-copybox": HTMLGgCopyboxElement;
+    "ggc-copybox": HTMLGgcCopyboxElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "gg-copybox": JSXElements.GgCopyboxAttributes;
+      "ggc-copybox": JSXElements.GgcCopyboxAttributes;
     }
   }
   namespace JSXElements {
-    export interface GgCopyboxAttributes extends HTMLAttributes {
+    export interface GgcCopyboxAttributes extends HTMLAttributes {
       
     }
   }
@@ -68,29 +68,29 @@ declare global {
 
 
 import {
-  ggPageHeader as GgPageHeader
-} from './components/gg-page-header/gg-page-header';
+  ggcPageHeader as GgcPageHeader
+} from './components/ggc-page-header/ggc-page-header';
 
 declare global {
-  interface HTMLGgPageHeaderElement extends GgPageHeader, HTMLElement {
+  interface HTMLGgcPageHeaderElement extends GgcPageHeader, HTMLElement {
   }
-  var HTMLGgPageHeaderElement: {
-    prototype: HTMLGgPageHeaderElement;
-    new (): HTMLGgPageHeaderElement;
+  var HTMLGgcPageHeaderElement: {
+    prototype: HTMLGgcPageHeaderElement;
+    new (): HTMLGgcPageHeaderElement;
   };
   interface HTMLElementTagNameMap {
-    "gg-page-header": HTMLGgPageHeaderElement;
+    "ggc-page-header": HTMLGgcPageHeaderElement;
   }
   interface ElementTagNameMap {
-    "gg-page-header": HTMLGgPageHeaderElement;
+    "ggc-page-header": HTMLGgcPageHeaderElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "gg-page-header": JSXElements.GgPageHeaderAttributes;
+      "ggc-page-header": JSXElements.GgcPageHeaderAttributes;
     }
   }
   namespace JSXElements {
-    export interface GgPageHeaderAttributes extends HTMLAttributes {
+    export interface GgcPageHeaderAttributes extends HTMLAttributes {
       header?: string;
       image?: string;
     }
@@ -99,29 +99,29 @@ declare global {
 
 
 import {
-  ggTextBox as GgTextbox
-} from './components/gg-textbox/gg-textbox';
+  ggcTextBox as GgcTextbox
+} from './components/ggc-textbox/ggc-textbox';
 
 declare global {
-  interface HTMLGgTextboxElement extends GgTextbox, HTMLElement {
+  interface HTMLGgcTextboxElement extends GgcTextbox, HTMLElement {
   }
-  var HTMLGgTextboxElement: {
-    prototype: HTMLGgTextboxElement;
-    new (): HTMLGgTextboxElement;
+  var HTMLGgcTextboxElement: {
+    prototype: HTMLGgcTextboxElement;
+    new (): HTMLGgcTextboxElement;
   };
   interface HTMLElementTagNameMap {
-    "gg-textbox": HTMLGgTextboxElement;
+    "ggc-textbox": HTMLGgcTextboxElement;
   }
   interface ElementTagNameMap {
-    "gg-textbox": HTMLGgTextboxElement;
+    "ggc-textbox": HTMLGgcTextboxElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "gg-textbox": JSXElements.GgTextboxAttributes;
+      "ggc-textbox": JSXElements.GgcTextboxAttributes;
     }
   }
   namespace JSXElements {
-    export interface GgTextboxAttributes extends HTMLAttributes {
+    export interface GgcTextboxAttributes extends HTMLAttributes {
       label?: string;
       name?: string;
       placeholder?: string;

@@ -1,10 +1,10 @@
 import { Component, Prop } from '@stencil/core';
 
 @Component({
-  tag: 'gg-page-header',
-  styleUrl: 'gg-page-header.scss',
+  tag: 'ggc-page-header',
+  styleUrl: 'ggc-page-header.scss',
 })
-export class ggPageHeader {
+export class ggcPageHeader {
 
   @Prop() header: string;
   @Prop() image: string;
@@ -20,9 +20,9 @@ export class ggPageHeader {
       <header class="page-header-hero page-header-hero--large">
         <style>{css}</style>
         <div class="page-header-hero__title">
-          <gg-copybox>
+          <ggc-copybox>
             <h1 class="txt--display">{ this.header }</h1>
-          </gg-copybox>
+          </ggc-copybox>
         </div>
       
       </header>

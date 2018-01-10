@@ -1,10 +1,10 @@
 import { Component, Element, Event, EventEmitter, Prop, PropDidChange } from '@stencil/core';
 
 @Component({
-  tag: 'gg-textbox',
-  styleUrl: 'gg-textbox.scss'
+  tag: 'ggc-textbox',
+  styleUrl: 'ggc-textbox.scss'
 })
-export class ggTextBox {
+export class ggcTextBox {
 
   @Prop() name: string;
   @Prop() label: string;
