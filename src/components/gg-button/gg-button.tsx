@@ -22,12 +22,12 @@ export class ggButton {
 
   render() {
     this.type = this.type || 'button';
-    const classNames = `btn ${this.primary ? 'btn--primary' : '' } ${this.large ? 'btn--large' : '' }`;
+    const classNames = `c-btn ${this.primary ? 'c-btn--primary' : '' } ${this.large ? 'c-btn--large' : '' }`;
 
 
 
     return (
-      <button type={this.type} class={classNames} >
+      <button type={this.type} class={classNames}>
         <slot></slot>
       </button>
     );
